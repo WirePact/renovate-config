@@ -1,0 +1,22 @@
+{
+  "$schema": "http://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "vulnerabilityAlerts": {
+    "labels": [
+      "dependencies-security"
+    ]
+  },
+  "onboarding": true,
+  "onboardingConfig": {
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": ["github>WirePact/renovate-config"]
+  },
+  "automerge": true,
+  "timezone": "Europe/Zurich",
+  "schedule": ["after 9pm", "before 6am"]
+}
