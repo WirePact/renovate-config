@@ -1,15 +1,9 @@
 {
   "$schema": "http://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base"
-  ],
-  "labels": [
-    "dependencies"
-  ],
+  "extends": ["config:base", ":disableDependencyDashboard"],
+  "labels": ["dependencies"],
   "vulnerabilityAlerts": {
-    "labels": [
-      "dependencies-security"
-    ]
+    "labels": ["dependencies-security"]
   },
   "onboarding": true,
   "onboardingConfig": {
@@ -18,5 +12,8 @@
   },
   "automerge": true,
   "timezone": "Europe/Zurich",
-  "schedule": ["after 9pm", "before 6am"]
+  "schedule": ["after 9pm", "before 6am"],
+  "git-submodules": {
+    "enabled": true
+  }
 }
