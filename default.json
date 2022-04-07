@@ -5,6 +5,9 @@
   "vulnerabilityAlerts": {
     "labels": ["dependencies-security"]
   },
+  "branchConcurrentLimit": 0,
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
   "onboarding": true,
   "onboardingConfig": {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
@@ -15,5 +18,11 @@
   "schedule": ["after 9pm", "before 6am"],
   "git-submodules": {
     "enabled": true
+  },
+  "dotnet": {
+    "extends": ["github>WirePact/renovate-config:dotnet-solution"]
+  },
+  "rust": {
+    "extends": ["github>WirePact/renovate-config:rust"]
   }
 }
